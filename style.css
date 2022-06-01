@@ -9,33 +9,120 @@
 /*Body*/
 body{
     font-family: 'Manrope', sans-serif;
-    font-size: 13px;
+
     margin: 0;
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: hsla(212, 23%, 69%, 0.281);
+    background-color: var(--bg-and-date);
 }
 
 /*Main container*/
 .container{
     width: 800px;
     height: 300px;
-    background-color: hsl(0, 0%, 97%);
+    background-color: var(--card-bg);
     display: flex;
     border-radius: 8px;
 }
 
+/*figure container*/
 .fig-container{
-    width: 700px;
-    height: 300px;
+    width: 100%;
+    height: auto;
     margin: 0;
 }
 .fig-container img{
     border-radius: 8px 0 0 8px;
     width: 100%;
     height: 100%;
-    box-sizing: border-box;
+    object-fit: cover;
+}
+
+/*text container*/
+.text-container{
+    width: auto;
+    height: auto;
+    padding: 20px 40px;
+}
+.text-title{
+    color: var(--headings);
+    margin: 0;
+}
+.text-p{
+    margin: 0;
+    color: var(--paragraph);
+    font-size: 13px;
+}
+/*credits and share container*/
+/*credits*/
+.credits-share-container{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 0;
+
+}
+.credits-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.img-container{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+}
+.img-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.person-container{
+    margin-left: 12px;
+}
+.author-title{
+    margin: 0;
+    font-size: 13px;
+    color: var(--headings);
+}
+.date-p{
+    margin: 0;
+    font-size: 13px;
+    color: var(--bg-and-date);
+}
+.share-ckb{
+    opacity: 0;
+    width: 24px;
+    height: 24px;
+    position: fixed;
+}
+.share-bg{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--bg-and-date);
+    display: inline-grid;
+    place-content: center;
+}
+.share-ckb{
+    cursor: pointer;
+}
+
+.share-ckb:checked + label{
+    background-color: var(--headings);
+}
+.share-ckb:checked + label .share-img{
+    filter: brightness(0) invert(1);;
+}
+
+
+/*Share options*/
+.share-options-container{
+    position: absolute;
+    left: 0;
+    opacity: 0;
 }
