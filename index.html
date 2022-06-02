@@ -45,25 +45,27 @@
             </div>
           </div>
           <div class="share-container">
-            <input class="share-ckb" type="checkbox" name="share" />
+            <input id="btn" class="share-ckb" type="checkbox" name="share" />
             <label class="share-bg" for="share">
               <img class="share-img" src="./images/icon-share.svg" alt=""
             /></label>
           </div>
         </div>
-        <div class="share-options-container">
+        <div class="share-options-container" id="opt">
+          <div class="arrow"></div>
           <p class="share-p">SHARE</p>
-          <button class="share-buttons">
+          <button class="share-buttons" type="button">
             <img src="./images/icon-facebook.svg" alt="" />
           </button>
-          <button class="share-buttons">
+          <button class="share-buttons" type="button">
             <img src="./images/icon-twitter.svg" alt="" />
           </button>
-          <button class="share-buttons">
+          <button class="share-buttons" type="button">
             <img src="./images/icon-pinterest.svg" alt="" />
           </button>
         </div>
       </article>
     </section>
+    <script src="./index.js"></script>
   </body>
 </html>
