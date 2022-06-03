@@ -26,6 +26,7 @@ body{
     display: flex;
     border-radius: 8px;
     position: relative;
+    flex-direction: row-reverse;
 }
 
 /*figure container*/
@@ -167,6 +168,7 @@ body{
         flex-direction: column;
         width: 338px;
         height: 550px;
+        flex-direction: column-reverse;
     }
     .text-container{
         height: 254px;
