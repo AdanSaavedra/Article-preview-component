@@ -9,7 +9,6 @@
 /*Body*/
 body{
     font-family: 'Manrope', sans-serif;
-
     margin: 0;
     width: 100%;
     height: 100vh;
@@ -118,7 +117,8 @@ body{
     background-color: var(--headings);
 }
 .share-ckb:checked + label .share-img{
-    filter: brightness(0) invert(1);;
+    filter: brightness(0) invert(1);
+    transition: 200ms;
 }
 
 
@@ -137,6 +137,7 @@ body{
     justify-content: center;
     align-items: center;
     opacity: 0;
+    transition: 200ms;
 }
 .share-p{
     letter-spacing: 1.5px;
@@ -158,4 +159,61 @@ body{
     position: absolute;
     bottom: -14px;
     right: 106px;
+}
+
+/*Media query*/
+@media(max-width: 375px){
+    .container{
+        flex-direction: column;
+        width: 338px;
+        height: 550px;
+    }
+    .text-container{
+        height: 254px;
+    }
+    .fig-container img{
+        border-radius: 8px 8px 0 0;
+    }
+    .text-title{
+        font-size: 16px;
+    }
+    .text-p{
+        text-align: left;
+    }
+    .share-options-container{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 250px;
+        height: 64px;
+        border-radius: 0 0 0 8px;
+        transition: 200ms;
+    }
+    .arrow{
+        opacity: 0;
+    }
+    .share-container{
+        border-radius: 0 0 8px 0;
+    }
+    .square{
+        width: 88px;
+        height: 64px;
+        position: absolute;
+        background-color: var(--headings);
+        right: 0;
+        bottom: 0;
+        border-radius: 0 0 8px 0;
+        opacity: 0;
+        transition: 200ms;
+    }
+    .share-ckb{
+        position: fixed;
+        z-index: 2;
+    }
+    .share-bg{
+        position: relative;
+    }
+    .share-ckb:checked + label{
+        background-color: var(--bg-and-date);
+    }
 }
